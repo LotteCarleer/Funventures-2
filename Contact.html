@@ -4,16 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS</title>
+    <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
     <nav>
       <img src="./Css logo's/CSS logo.png" alt="Css logo" />
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Navigatie links -->
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Over ons</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Merch</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Inschrijven</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">English</a></li>
+      </ul>
     </nav>
-    <div>
+    <div class="contact">
       <h1>Contact</h1>
       <p>Mocht je hulp nodig hebben, aarzel niet om ons te contacteren.</p>
-    </div>
-    <div>
       <form action="">
         <div>
           <label for="Voornaam">Voornaam</label>
@@ -47,46 +64,44 @@
     <div>
       <img src="./Css logo's/image 6.png" alt="Sport spullen" />
     </div>
-    <footer clas="footer">
-      <img src="./Css logo's/CSS logo.png" alt="logo css" />
-      <footer>
-        <div class="footer-container">
-          <div class="socials">
-            <p>Volg ons:</p>
-            <a href="#">Facebook</a> |
-            <a href="#">Instagram</a> |
-            <a href="#">Twitter</a> |
-            <a href="#">YouTube</a>
+    <footer>
+      <img class="img-footer" src="./Css logo's/Group 6.png" alt="logo css" />
+      <div class="footer-container">
+        <div class="socials">
+          <p>Volg ons:</p>
+          <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+          <a href="#">Twitter</a> |
+          <a href="#">YouTube</a>
+        </div>
+        <p>© 2024 CSS. All Rights Reserved.</p>
+        <p>Toegewijd aan teamwork en gemeenschap.</p>
+
+        <div class="footer-links">
+          <div class="section">
+            <h4>Winkel</h4>
+            <ul>
+              <li><a href="#">Artikelen</a></li>
+              <li><a href="#">Accessoires</a></li>
+              <li><a href="#">Meest Verkocht</a></li>
+            </ul>
           </div>
-          <p>© 2024 CSS. All Rights Reserved.</p>
-          <p>Toegewijd aan teamwork en gemeenschap.</p>
-      
-          <div class="footer-links">
-            <div class="section">
-              <h4>Winkel</h4>
-              <ul>
-                <li><a href="#">Artikelen</a></li>
-                <li><a href="#">Accessoires</a></li>
-                <li><a href="#">Meest Verkocht</a></li>
-              </ul>
-            </div>
-            <div class="section">
-              <h4>Over ons</h4>
-              <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Onze visie</a></li>
-                <li><a href="#">Inschrijven</a></li>
-              </ul>
-            </div>
-            <div class="section">
-              <h4>Agenda</h4>
-              <ul>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Algemene regels</a></li>
-              </ul>
-            </div>
+          <div class="section">
+            <h4>Over ons</h4>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Onze visie</a></li>
+              <li><a href="#">Inschrijven</a></li>
+            </ul>
+          </div>
+          <div class="section">
+            <h4>Agenda</h4>
+            <ul>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Algemene regels</a></li>
+            </ul>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>

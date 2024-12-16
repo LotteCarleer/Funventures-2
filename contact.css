@@ -1,4 +1,18 @@
-/* Footer Styling */
+h1 {
+  color: white;
+  font-family: Bebas Neue;
+  font-size: 48px;
+}
+p {
+  color: white;
+  font-family: open sans;
+  font-size: 100px;
+}
+
+.contact {
+  background-color: #00738d;
+}
+
 footer {
   background-color: #0d1b38;
   color: #fff;
