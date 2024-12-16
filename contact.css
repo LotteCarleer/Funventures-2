@@ -1,3 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Verborgen checkbox voor hamburger menu */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger menu icoon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background-color: #333333;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Navigatie links */
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: #00738d;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: bebas neue;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #3db0c9;
+}
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    padding-right: 15px;
+    z-index: 1000;
+  }
+
+  /* Checkbox hack: toon het menu bij een actieve checkbox */
+  #menu-toggle:checked + .menu-icon + .nav-list {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 15px 0;
+  }
+}
 h1 {
   color: white;
   font-family: Bebas Neue;
@@ -5,12 +100,67 @@ h1 {
 }
 p {
   color: white;
-  font-family: open sans;
-  font-size: 100px;
+  font-family: Open Sans;
+  font-size: 16px;
+}
+#Voornaam {
+  color: white;
+  font-family: Open Sans;
 }
 
 .contact {
   background-color: #00738d;
+}
+.form {
+  color: white;
+}
+#Voornaam {
+  background-color: #115665;
+  stroke: ;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#Achternaam {
+  background-color: #115665;
+  stroke: ;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#E-mail {
+  background-color: #115665;
+  stroke: ;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#password {
+  background-color: #115665;
+  stroke: ;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#Vraag {
+  background-color: #115665;
+  height: 120px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+
+#Studentennummer {
+  background-color: #115665;
+  stroke: ;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
 }
 
 footer {
