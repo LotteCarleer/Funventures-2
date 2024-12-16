@@ -103,7 +103,7 @@ nav {
   }
 
   /* Checkbox hack: toon het menu bij een actieve checkbox */
-  .menu-icon input[type="checkbox"]:checked ~ .nav-list {
+  #menu-toggle input[type="checkbox"]:checked ~ .nav-list {
     transform: translate(0);
   }
 
