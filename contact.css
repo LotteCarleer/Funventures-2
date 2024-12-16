@@ -8,11 +8,28 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.fa-x {
+  color: #333333;
+  cursor: pointer;
+}
+
+.fa-x:hover {
+  color: #00738d;
+}
+
+.cross-button:active + .nav-list {
+  display: none;
+}
+
+.nav-list input {
+  visibility: hidden;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #e0e9e6;
   color: #fff;
   padding: 10px 20px;
 }
@@ -70,23 +87,24 @@ nav {
     display: flex;
   }
 
-  .nav-list {
+  .nav-list input[type="checkbox"] {
     display: none;
-    flex-direction: column;
-    background-color: white;
+  }
+  .nav-list {
     position: absolute;
-    top: 50px;
-    left: 50%;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    text-align: right;
-    padding-right: 15px;
-    z-index: 1000;
+    background-color: #1d1d1d;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateX(-120%);
+    transition: all 1s ease-in-out;
+    overflow-x: hidden;
   }
 
   /* Checkbox hack: toon het menu bij een actieve checkbox */
-  #menu-toggle:checked + .menu-icon + .nav-list {
-    display: flex;
+  .menu-icon input[type="checkbox"]:checked ~ .nav-list {
+    transform: translate(0);
   }
 
   .nav-list li {
@@ -97,11 +115,13 @@ h1 {
   color: white;
   font-family: Bebas Neue;
   font-size: 48px;
+  padding: 0px 27px;
 }
 p {
   color: white;
   font-family: Open Sans;
   font-size: 16px;
+  padding: 20px 27px;
 }
 #Voornaam {
   color: white;
@@ -113,10 +133,16 @@ p {
 }
 .form {
   color: white;
+  padding: 0px 27px;
 }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
 #Voornaam {
   background-color: #115665;
-  stroke: ;
   height: 48px;
   width: 302px;
   border-radius: 5px;
@@ -124,7 +150,6 @@ p {
 }
 #Achternaam {
   background-color: #115665;
-  stroke: ;
   height: 48px;
   width: 302px;
   border-radius: 5px;
@@ -132,7 +157,6 @@ p {
 }
 #E-mail {
   background-color: #115665;
-  stroke: ;
   height: 48px;
   width: 302px;
   border-radius: 5px;
@@ -140,7 +164,6 @@ p {
 }
 #password {
   background-color: #115665;
-  stroke: ;
   height: 48px;
   width: 302px;
   border-radius: 5px;
@@ -156,7 +179,6 @@ p {
 
 #Studentennummer {
   background-color: #115665;
-  stroke: ;
   height: 48px;
   width: 302px;
   border-radius: 5px;
