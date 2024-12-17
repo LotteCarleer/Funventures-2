@@ -74,7 +74,7 @@ nav {
 .nav-list a {
   color: #00738d;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 12px;
   font-family: bebas neue;
   transition: color 0.3s;
 }
@@ -87,14 +87,14 @@ nav {
 @media (max-width: 768px) {
   .menu-icon {
     display: flex;
+    z-index: ;
   }
 
   .nav-list {
     position: fixed;
-    width: 800px;
-    height: 1000px;
-    padding: 1000px;
-    margin: 200px;
+    width: 480px;
+    height: 2000px;
+
     background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -111,10 +111,13 @@ nav {
     margin: 15px 0;
   }
   .nav-list a {
-    color: blue;
-    font-size: 100px;
+    color: #00738d;
+    font-size: 14px;
   }
 }
+@media (min-width: 768px) {
+}
+
 h1 {
   color: white;
   font-family: Bebas Neue;
@@ -293,4 +296,40 @@ footer {
 
 .section:nth-child(2) {
   order: 1;
+}
+/* Contact container styling */
+.contact-container {
+  display: flex; /* Flexbox voor zij-aan-zij layout */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Ruimte tussen afbeelding en formulier */
+  padding: 20px;
+}
+
+.image-container {
+  flex: 1; /* De afbeelding neemt een deel van de ruimte in */
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact {
+  flex: 1; /* Het formulier neemt de rest van de ruimte in */
+  max-width: 500px;
+}
+
+/* Media Query voor tablet en smartphone */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Zet de layout onder elkaar */
+    align-items: center; /* Centreer de items */
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+  }
 }
