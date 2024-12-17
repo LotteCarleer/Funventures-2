@@ -297,39 +297,3 @@ footer {
 .section:nth-child(2) {
   order: 1;
 }
-/* Contact container styling */
-.contact-container {
-  display: flex; /* Flexbox voor zij-aan-zij layout */
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px; /* Ruimte tussen afbeelding en formulier */
-  padding: 20px;
-}
-
-.image-container {
-  flex: 1; /* De afbeelding neemt een deel van de ruimte in */
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.contact {
-  flex: 1; /* Het formulier neemt de rest van de ruimte in */
-  max-width: 500px;
-}
-
-/* Media Query voor tablet en smartphone */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column; /* Zet de layout onder elkaar */
-    align-items: center; /* Centreer de items */
-  }
-
-  .image-container {
-    margin-bottom: 20px;
-  }
-}
