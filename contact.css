@@ -7,6 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #00738d;
+  max-width: 100%;
 }
 
 .fa-x {
@@ -22,6 +23,10 @@ body {
   display: none;
 }
 
+.nav-list input {
+  visibility: hidden;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -29,7 +34,6 @@ nav {
   background-color: #e0e9e6;
   color: #fff;
   padding: 10px 20px;
-  flex-wrap: wrap; /* Voeg flex-wrap toe voor responsiviteit */
 }
 
 .logo {
@@ -61,8 +65,6 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Zorg ervoor dat de lijst flexibeler wordt bij kleinere schermen */
-  justify-content: space-between;
 }
 
 .nav-list li {
@@ -88,17 +90,16 @@ nav {
   }
 
   .nav-list {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #1d1d1d;
+    position: fixed;
+    width: 800px;
+    height: 1000px;
+    padding: 1000px;
+    margin: 200px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     transform: translateX(-120%);
     transition: all 1s ease;
-    flex-direction: column; /* Maak de lijst verticaal */
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
   }
 
   /* Checkbox hack: toon het menu bij een actieve checkbox */
@@ -110,16 +111,10 @@ nav {
     margin: 15px 0;
   }
   .nav-list a {
-    color: #ffff;
-    font-size: 1.2rem;
-  }
-
-  /* Verkort de ruimte tussen menu-items */
-  nav {
-    padding: 10px;
+    color: blue;
+    font-size: 100px;
   }
 }
-
 h1 {
   color: white;
   font-family: Bebas Neue;
@@ -146,20 +141,54 @@ label {
   margin: 20px 0px 10px 0px;
 }
 
-input {
+#Voornaam {
   background-color: #115665;
   height: 48px;
-  width: 100%;
-  max-width: 302px; /* Maak het formulier flexibeler */
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#Achternaam {
+  background-color: #115665;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#E-mail {
+  background-color: #115665;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#password {
+  background-color: #115665;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+}
+#Vraag {
+  background-color: #115665;
+  height: 120px;
+  width: 302px;
   border-radius: 5px;
   border: 1px solid #589dac;
 }
 
+#Studentennummer {
+  background-color: #115665;
+  height: 48px;
+  width: 302px;
+  border-radius: 5px;
+  border: 1px solid #589dac;
+  margin: 0px 0px 50px 0px;
+}
 button {
   background-color: #89bc4c;
   height: 48px;
-  width: 100%;
-  max-width: 196px; /* Maak de knop flexibeler */
+  width: 196px;
   border-radius: 5px;
   border: 1px;
   box-shadow: #0d1b38;
@@ -167,23 +196,13 @@ button {
   font-size: 24px;
   color: #333333;
 }
-
 #Sport {
   background-color: #e0e9e6;
   margin: 120px 0px 0px 0px;
 }
-
 .sporten {
-  margin: 44px;
-  width: 100%;
-  max-width: 400px; /* Beperk de grootte van de afbeelding */
-  height: auto;
+  max-width: 100%;
 }
-@media (max-width: 768px) {
-  .sporten {
-    flex-direction: column;
-    gap: 10px;
-  }
 
 footer {
   background-color: #0d1b38; /* Donkerblauwe achtergrond */
@@ -195,7 +214,6 @@ footer {
 .footer-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .footer-container p,
@@ -217,8 +235,7 @@ footer {
 .logo-section {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap; /* Flexibel maken op kleine schermen */
-  gap: 20px;
+  margin-bottom: 15px;
 }
 
 .logo p {
@@ -246,7 +263,7 @@ footer {
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -274,29 +291,6 @@ footer {
   text-decoration: underline;
 }
 
-/* Verander de volgorde op mobiele apparaten */
 .section:nth-child(2) {
   order: 1;
-}
-
-/* Footer responsiviteit */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-links .section {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .footer-links .section h4 {
-    font-size: 1.2rem;
-  }
 }
